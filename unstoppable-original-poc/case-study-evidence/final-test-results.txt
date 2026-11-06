@@ -1,0 +1,12 @@
+No files changed, compilation skipped
+
+Ran 6 tests for test/unstoppable/Unstoppable.t.sol:UnstoppableChallenge
+[PASS] test_assertInitialState() (gas: 210369)
+[PASS] test_donationDoesNotChangePermissions() (gas: 99064)
+[PASS] test_flashLoanPreservesBalanceAfterDonation() (gas: 166859)
+[PASS] test_flashLoanRejectsExcessiveAmount() (gas: 56142)
+[PASS] test_flashLoanWorksAfterDonation() (gas: 166533)
+[PASS] test_securityFixPreventsDonationDoS() (gas: 166052)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 2.50ms (2.59ms CPU time)
+
+Ran 1 test suite in 21.67ms (2.50ms CPU time): 6 tests passed, 0 failed, 0 skipped (6 total tests)

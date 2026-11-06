@@ -1,0 +1,14 @@
+--- src/unstoppable/UnstoppableVault.vulnerable.bak	2026-10-19 05:40:03.900953900 +0000
++++ src/unstoppable/UnstoppableVault.sol	2026-10-19 05:49:28.320503100 +0000
+@@ -82,8 +82,10 @@
+         if (amount == 0) revert InvalidAmount(0); // fail early
+         if (address(asset) != _token) revert UnsupportedCurrency(); // enforce ERC3156 requirement
+         uint256 balanceBefore = totalAssets();
+-        if (convertToShares(totalSupply) != balanceBefore) revert InvalidBalance(); // enforce ERC4626 requirement
+ 
++if (amount > balanceBefore) {
++    revert InvalidAmount(amount);
++}
+         // transfer tokens out + execute callback on receiver
+         ERC20(_token).safeTransfer(address(receiver), amount);
+ 
